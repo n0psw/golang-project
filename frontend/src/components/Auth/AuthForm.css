@@ -1,0 +1,22 @@
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.auth-error {
+  padding: 1rem;
+  background-color: #ffebee;
+  color: var(--color-error);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-error);
+  font-size: 0.9rem;
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+

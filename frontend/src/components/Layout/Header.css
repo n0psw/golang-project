@@ -1,0 +1,123 @@
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.header-logo:hover {
+  color: var(--color-accent);
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+}
+
+.nav-link {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.header-auth {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-button {
+  background: none;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.user-button:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-hover);
+  min-width: 200px;
+  overflow: hidden;
+}
+
+.user-info {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.user-email {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.25rem;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.dropdown-item {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: var(--transition);
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-background);
+  color: var(--color-error);
+}
+
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+}
+

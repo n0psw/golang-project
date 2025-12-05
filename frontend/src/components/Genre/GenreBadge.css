@@ -1,0 +1,21 @@
+.genre-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.genre-badge.clickable {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.genre-badge.clickable:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+

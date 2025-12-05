@@ -1,0 +1,47 @@
+.review-list {
+  margin-bottom: 2rem;
+}
+
+.review-list-empty {
+  text-align: center;
+  padding: 3rem;
+  color: var(--color-text-light);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.review-list-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  color: var(--color-text);
+  font-weight: 500;
+}
+

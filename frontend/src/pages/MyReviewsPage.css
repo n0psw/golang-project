@@ -1,0 +1,61 @@
+.my-reviews-empty {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.my-reviews-empty p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.link-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.link-button:hover {
+  background-color: #e55a2b;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.my-reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.my-review-item {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.my-review-movie {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.movie-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.movie-link:hover {
+  text-decoration: underline;
+}
+
