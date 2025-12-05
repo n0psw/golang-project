@@ -1,6 +1,32 @@
 import axios, { type AxiosInstance, type InternalAxiosRequestConfig } from 'axios';
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api/v1';
+const DEFAULT_API_PATH = '/api/v1';
+
+const resolveApiBaseUrl = (): string => {
+  const envUrl = import.meta.env.VITE_API_URL?.trim();
+  if (envUrl) {
+    return envUrl.endsWith('/') ? envUrl.slice(0, -1) : envUrl;
+  }
+
+  if (typeof window === 'undefined') {
+    return DEFAULT_API_PATH;
+  }
+
+  const { protocol, hostname, port } = window.location;
+  const normalizedPort = port || (protocol === 'https:' ? '443' : '80');
+
+  // If we're already on the API port (e.g. reverse proxy), reuse the current origin + path.
+  if (normalizedPort === '8080' || normalizedPort === '80' || normalizedPort === '443' || normalizedPort === '') {
+    const portSegment =
+      normalizedPort === '80' || normalizedPort === '443' || normalizedPort === '' ? '' : `:${normalizedPort}`;
+    return `${protocol}//${hostname}${portSegment}${DEFAULT_API_PATH}`;
+  }
+
+  // Fall back to the common local setup where the backend listens on 8080.
+  return `${protocol}//${hostname}:8080${DEFAULT_API_PATH}`;
+};
+
+const API_BASE_URL = resolveApiBaseUrl();
 
 const apiClient: AxiosInstance = axios.create({
   baseURL: API_BASE_URL,
